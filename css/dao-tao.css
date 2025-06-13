@@ -32,6 +32,7 @@ a {
   height: 25px;
   margin-right: 8px;
   cursor: pointer;
+  margin-top: auto;
 }
 .topbar .top-links a {
   margin-left: 12px;
