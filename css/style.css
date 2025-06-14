@@ -78,28 +78,12 @@
     z-index: 1000;
   }
 
-  .logo {
-    display: flex !important;
-    flex-direction: row !important;
-  }
-  
-  .logo .logo1{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-right: 5px;
-  }
-
   .logo img {
-    height: 75px;
-    transition: height 0.3s ease;
-  }
-
-  .logo1 .logo2 img{
-    height: 50px;
-  }
+  height: 75px;
+  transition: height 0.3s ease;
+}
   .navbar {
-    position: relative;
+  position: relative;
   }
 
   /* MENU NGANG (DESKTOP) - LUÔN HIỆN */
@@ -193,26 +177,66 @@
     display: block;
   }
 
-  /* =========================
-    RESPONSIVE
-  ========================= */
-  @media (max-width: 900px) {
-    .logo img { height: 60px; }
-    .nav-menu { gap: 16px; font-size: 16px; }
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Desktop nhỏ hơn 900px */
+@media (max-width: 900px) {
+  .logo img {
+    height: auto;
+    max-height: 60px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
   }
-  @media (max-width: 768px) {
-    header { padding: 10px 10px; }
-    .nav-menu {
-      display: none;
-    }
-    .mobile-nav-toggle {
-      display: block;
-    }
+
+  .nav-menu {
+    gap: 16px;
+    font-size: 16px;
   }
-  @media (max-width: 500px) {
-    .logo img { height: 48px; }
-    .d-done { display: none; }
+}
+
+/* Tablet và mobile nhỏ hơn 768px */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 10px;
   }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .logo img {
+    height: auto;
+    max-height: 50px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+/* Điện thoại nhỏ hơn 500px */
+@media (max-width: 500px) {
+  .logo img {
+    height: auto;
+    max-height: 40px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+
+  .d-done {
+    display: none;
+  }
+}
+
 
   /* =========================
     LƯU Ý QUAN TRỌNG
@@ -920,110 +944,116 @@
   }
 
   /*footer*/
-  .footer {
-    background: #002a5c;
-    color: white;
-    padding: 40px 20px;
-  }
+.footer {
+  background: #002a5c;
+  color: white;
+  padding: 40px 20px;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+.footer-col {
+  flex: 1 1 300px;
+}
+.footer-logo {
+  height: 60px;
+  max-width: 100%;
+  width: auto;
+  display: block;
+  margin-bottom: 6px;
+}
+.footer-sub {
+  font-size: 16px;
+  opacity: 0.8;
+}
+.footer-col h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.social-icons a img {
+  width: 35px;
+  margin-right: 12px;
+}
+.fb-box img {
+  width: 150%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+.subscribe-form {
+  display: flex;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+  max-width: 350px;
+}
+.subscribe-form input {
+  border: none;
+  padding: 12px; /* Tăng padding cho input */
+  flex: 1;
+  font-size: 16px; /* Tăng kích thước chữ trong input */
+}
+.subscribe-form button {
+  background: #ffc107;
+  border: none;
+  padding: 12px 16px; /* Tăng padding cho button */
+  cursor: pointer;
+  font-size: 16px; /* Tăng kích thước chữ trong button */
+}
+.subscribe-form button img {
+  width: 28px;
+}
+.footer-privacy {
+  font-size: 10px; /* Tăng kích thước chữ lên 14px */
+  margin-top: 16px;
+}
+.footer-privacy a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
   .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
   .footer-col {
-    flex: 1 1 300px;
+    flex-basis: auto;
   }
+
   .footer-logo {
-    height: 80px;
-    margin-bottom: 6px;
+    height: 40px;
+    max-width: 100%;
+    width: auto;
+    display: block;
   }
-  .footer-sub {
-    font-size: 16px;
-    opacity: 0.8;
-  }
-  .footer-col h4 {
-    font-size: 20px;
-    margin-bottom: 12px;
-  }
+
   .social-icons a img {
-    width: 35px;
-    margin-right: 12px;
+    width: 30px;
   }
-  .fb-box img {
-    width: 150%;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-  }
+
   .subscribe-form {
-    display: flex;
-    background: white;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-top: 8px;
-    max-width: 350px;
+    max-width: 100%;
   }
-  .subscribe-form input {
-    border: none;
-    padding: 12px; /* Tăng padding cho input */
-    flex: 1;
-    font-size: 16px; /* Tăng kích thước chữ trong input */
-  }
+
+  .subscribe-form input,
   .subscribe-form button {
-    background: #ffc107;
-    border: none;
-    padding: 12px 16px; /* Tăng padding cho button */
-    cursor: pointer;
-    font-size: 16px; /* Tăng kích thước chữ trong button */
+    padding: 10px;
+    font-size: 14px;
   }
   .subscribe-form button img {
-    width: 28px;
+    width: 20px;
   }
-  .footer-privacy {
-    font-size: 10px; /* Tăng kích thước chữ lên 14px */
-    margin-top: 16px;
-  }
-  .footer-privacy a {
-    color: #ccc;
-    text-decoration: underline;
-  }
+}
 
-  /* Responsive styles for mobile */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .footer-col {
-      flex-basis: auto;
-    }
-
-    .footer-logo {
-      height: 70px;
-    }
-
-    .social-icons a img {
-      width: 30px;
-    }
-
-    .subscribe-form {
-      max-width: 100%;
-    }
-
-    .subscribe-form input,
-    .subscribe-form button {
-      padding: 10px;
-      font-size: 14px;
-    }
-
-    .subscribe-form button img {
-      width: 20px;
-    }
-  }
   /* =========================
     NEWS SECTION
   /* Header căn trái */

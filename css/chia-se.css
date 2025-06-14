@@ -433,7 +433,7 @@
     flex: 1 1 300px;
   }
   .footer-logo {
-    height: 80px;
+    height: 60px;
     margin-bottom: 6px;
   }
   .footer-sub {
@@ -499,7 +499,7 @@
     }
 
     .footer-logo {
-      height: 70px;
+      height: 40px;
     }
 
     .social-icons a img {

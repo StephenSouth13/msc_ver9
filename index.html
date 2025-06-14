@@ -112,18 +112,13 @@
   <!-- Header + Navbar -->
   <header id="header">
     <div class="logo">
-      <div class="logo1">
-        <a href="index.html" class="image1"><img src="msc/assets/logo/LogoMSC.webp" alt="MSC Logo" /></a>
-        <a href="index.html" class="logo2"><img src="msc/assets/logo/image2.png" alt="MSC Logo" /></a>
-      </div>
-      <a href="index.html" class="logo3"><img src="msc/assets/logo/image3.png" alt="MSC Logo" /></a>
+      <a href="../index.html"><img src="../msc/assets/logo/LogoMSC.webp" alt="MSC Logo" /></a>
     </div>
     <nav class="navbar">
       <!-- Nút mở menu (hamburger icon) -->
       <div class="mobile-nav-toggle" id="mobile-toggle">
         <i class="bi bi-list"></i>
       </div>
-
       <!-- Menu dành cho PC -->
       <ul class="nav-menu">
         <li><a href="trang-con/gioi-thieu.html">GIỚI THIỆU</a></li>
@@ -705,33 +700,26 @@
     <!-- End Code carousel -->
 
 
-    <!--Footer-->
+
+ <!--Footer-->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-col">
-          <div class="logo-bottom">
-            <img src="msc/assets/logo/logo.png" alt="msc Logo" class="footer-logo" />
-            <div class="logo-bottom1">
-              <a href="index.html" class="logo2"><img src="msc/assets/logo/image2.png" alt="MSC Logo" /></a>
-              <a href="index.html" class="logo3"><img src="msc/assets/logo/image4.png" alt="MSC Logo" /></a>
-            </div>
-          </div>
-
+          <img src="../msc/assets/logo/logo.png" alt="msc Logo" class="footer-logo" />
           <p class="footer-sub">279 Nguyễn Tri Phương, Quận 10, TP.Hồ Chí Minh</p>
           <p class="footer-sub">Điện Thoại: (+84) 329 381 489</p>
           <p class="footer-sub">Email: msc.edu.vn@gmail.com</p>
-          <p class="footer-sub">© 2025 MSC Center. Phát triển bởi
-            <br> Phòng Công nghệ thông tin
-          </p>
-
+          <p class="footer-sub">© 2025 MSC Center. Phát triển bởi 
+            <br> Phòng Công nghệ thông tin</p>
+      
         </div>
 
         <div class="footer-col">
           <h4>Kết nối với chúng tôi</h4>
           <div class="social-icons">
-            <a href="https://www.facebook.com/msc.edu.vn"><img src="msc/assets/logo/fb.png" alt="Facebook" /></a>
-            <a href="#"><img src="msc/assets/logo/ytb copy.png" alt="YouTube" /></a>
-            <a href="https://zalo.me/g/acumou501"><img src="msc/assets/logo/zalo.webp" alt="Yputebe" /></a>
+            <a href="https://www.facebook.com/msc.edu.vn"><img src="../msc/assets/logo/fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="../msc/assets/logo/ytb copy.png" alt="YouTube" /></a>
+            <a href="https://zalo.me/g/acumou501"><img src="../msc/assets/logo/zalo.webp" alt="Yputebe" /></a>
           </div>
 
           <!-- Fanpage Facebook -->
@@ -745,17 +733,16 @@
         </div>
 
         <div class="footer-col">
-          <div class="footer-col">
-            <h4>Đăng ký nhận tin tức mới nhất từ MSC</h4>
-            <form class="subscribe-form">
-              <input type="email" placeholder="Email của bạn" required />
-              <button type="submit">
-                <img src="msc/assets/send.png" alt="Gửi" />
-              </button>
-            </form>
-          </div>
-
+          <h4>Đăng ký nhận tin tức mới nhất từ MSC</h4>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Email của bạn" required />
+            <button type="submit">
+              <img src="../msc/assets/send.png" alt="Gửi" />
+            </button>
+          </form>
         </div>
+        
+      </div>
     </footer>
 
     <!-- SDK Facebook -->
@@ -764,58 +751,92 @@
       nonce="abc123"></script>
 
     <style>
-      .fb-page {
-        margin-top: 12px;
-        border-radius: 8px;
-        overflow: hidden;
-      }
+    /* =========================
+   Facebook Page Widget
+========================= */
+.fb-page {
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px; /* Giới hạn chiều rộng tối đa */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+}
 
-      .logo-bottom1{
-        display: flex;
-        align-items: center;
-      }
+/* =========================
+   Footer Responsive Layout
+========================= */
 
-      .footer-col .logo2 img {
-        height: 46px;
-      }
+/* Mặc định cho desktop */
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px 40px;
+}
 
-      .logo3 img{
-        height: 100px;
-      }
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
 
-      @media (max-width: 768px) {
-        .footer-container {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
+.subscribe-form {
+  width: 100%;
+  max-width: 300px;
+}
 
-        .footer-col {
-          margin-bottom: 20px;
-        }
+/* Tablet: nhỏ hơn hoặc bằng 1024px */
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 16px;
+    padding: 20px;
+  }
 
-        .logo-bottom {
-          display: flex !important;
-          flex-direction: column !important;
-        }
+  .subscribe-form {
+    max-width: 100%;
+  }
+}
 
-        .logo-bottom .logo-bottom1 {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          margin: 0px auto;
-        }
+/* Mobile: nhỏ hơn hoặc bằng 768px */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
 
-        .logo-bottom img {
-          height: 136px;
-          transition: height 0.3s ease;
-        }
+  .footer-col {
+    margin-bottom: 20px;
+    width: 100%;
+  }
 
+  .subscribe-form {
+    width: 100%;
+  }
 
-        .subscribe-form {
-          width: 100%;
-        }
-      }
+  .fb-page {
+    max-width: 100%;
+  }
+}
+
+/* Mobile nhỏ: nhỏ hơn hoặc bằng 480px */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 10px;
+  }
+
+  .footer-col {
+    margin-bottom: 15px;
+  }
+
+  .fb-page {
+    border-radius: 6px;
+  }
+}
+
     </style>
 
     <script src="../js/main.js" defer></script>

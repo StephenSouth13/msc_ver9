@@ -74,14 +74,10 @@
     </div>
   </div>
 
- <!-- Header + Navbar -->
+  <!-- Header + Navbar -->
   <header id="header">
     <div class="logo">
-      <div class="logo1">
-        <a href="../index.html" class="image1"><img src="../msc/assets/logo/LogoMSC.webp" alt="MSC Logo" /></a>
-        <a href="../index.html" class="logo2"><img src="../msc/assets/logo/image2.png" alt="MSC Logo" /></a>
-      </div>
-      <a href="../index.html" class="logo3"><img src="../msc/assets/logo/image3.png" alt="MSC Logo" /></a>
+      <a href="../index.html"><img src="../msc/assets/logo/LogoMSC.webp" alt="MSC Logo" /></a>
     </div>
     <nav class="navbar">
       <!-- Nút mở menu (hamburger icon) -->
@@ -159,33 +155,25 @@
 
 
 
-  <!--Footer-->
+   <!--Footer-->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-col">
-          <div class="logo-bottom">
-            <img src="../msc/assets/logo/logo.png" alt="msc Logo" class="footer-logo" />
-            <div class="logo-bottom1">
-              <a href="../index.html" class="logo2"><img src="../msc/assets/logo/image2.png" alt="MSC Logo" /></a>
-              <a href="../index.html" class="logo3"><img src="../msc/assets/logo/image4.png" alt="MSC Logo" /></a>
-            </div>
-          </div>
-
+          <img src="../msc/assets/logo/logo.png" alt="msc Logo" class="footer-logo" />
           <p class="footer-sub">279 Nguyễn Tri Phương, Quận 10, TP.Hồ Chí Minh</p>
           <p class="footer-sub">Điện Thoại: (+84) 329 381 489</p>
           <p class="footer-sub">Email: msc.edu.vn@gmail.com</p>
-          <p class="footer-sub">© 2025 MSC Center. Phát triển bởi
-            <br> Phòng Công nghệ thông tin
-          </p>
-
-       </div>
+          <p class="footer-sub">© 2025 MSC Center. Phát triển bởi 
+            <br> Phòng Công nghệ thông tin</p>
+      
+        </div>
 
         <div class="footer-col">
           <h4>Kết nối với chúng tôi</h4>
           <div class="social-icons">
             <a href="https://www.facebook.com/msc.edu.vn"><img src="../msc/assets/logo/fb.png" alt="Facebook" /></a>
             <a href="#"><img src="../msc/assets/logo/ytb copy.png" alt="YouTube" /></a>
-            <a href="https://zalo.me/g/acumou501"><img src="../msc/assets/logo/zalo.webp" alt="Zalo" /></a>
+            <a href="https://zalo.me/g/acumou501"><img src="../msc/assets/logo/zalo.webp" alt="Yputebe" /></a>
           </div>
 
           <!-- Fanpage Facebook -->
@@ -199,17 +187,16 @@
         </div>
 
         <div class="footer-col">
-          <div class="footer-col">
-            <h4>Đăng ký nhận tin tức mới nhất từ MSC</h4>
-            <form class="subscribe-form">
-              <input type="email" placeholder="Email của bạn" required />
-              <button type="submit">
-                <img src="../msc/assets/send.png" alt="Gửi" />
-              </button>
-            </form>
-          </div>
-
+          <h4>Đăng ký nhận tin tức mới nhất từ MSC</h4>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Email của bạn" required />
+            <button type="submit">
+              <img src="../msc/assets/send.png" alt="Gửi" />
+            </button>
+          </form>
         </div>
+        
+      </div>
     </footer>
 
     <!-- SDK Facebook -->
@@ -224,19 +211,6 @@
         overflow: hidden;
       }
 
-      .logo-bottom1{
-        display: flex;
-        align-items: center;
-      }
-
-      .footer-col .logo2 img {
-        height: 46px;
-      }
-
-      .logo3 img{
-        height: 100px;
-      }
-
       @media (max-width: 768px) {
         .footer-container {
           flex-direction: column;
@@ -247,24 +221,6 @@
         .footer-col {
           margin-bottom: 20px;
         }
-
-        .logo-bottom {
-          display: flex !important;
-          flex-direction: column !important;
-        }
-
-        .logo-bottom .logo-bottom1 {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          margin: 0px auto;
-        }
-
-        .logo-bottom img {
-          height: 136px;
-          transition: height 0.3s ease;
-        }
-
 
         .subscribe-form {
           width: 100%;
