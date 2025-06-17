@@ -1011,7 +1011,14 @@
   color: #ccc;
   text-decoration: underline;
 }
-
+.fb-page {
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px; /* Giới hạn chiều rộng tối đa */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng nhẹ */
+}
 /* Responsive: Tablet */
 @media (max-width: 1024px) {
   .footer-container {
