@@ -1,6 +1,4 @@
 User-agent: *
-Allow: /
+Disallow:
 
-# Chặn bot crawl các URL có đuôi .html (vì bạn đã dùng URL sạch)
-Disallow: /*.html$
 Sitemap: https://msc.edu.vn/sitemap.xml
