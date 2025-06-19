@@ -1,18 +1,61 @@
+# Kích hoạt rewrite
 RewriteEngine On
 
-# 1. Chuyển redirect index.html -> / (trang chủ)
+#########################
+# 1. Ép HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#########################
+# 2. Chuẩn hóa non-www (www -> non-www)
+RewriteCond %{HTTP_HOST} ^www\.msc\.edu\.vn$ [NC]
+RewriteRule ^(.*)$ https://msc.edu.vn/$1 [L,R=301]
+
+#########################
+# 3. Chuyển index.html → /
 RewriteCond %{THE_REQUEST} /index\.html [NC]
 RewriteRule ^index\.html$ / [R=301,L]
 
-# 2. Redirect URL có đuôi .html sang URL không đuôi (để thống nhất URL)
+#########################
+# 4. URL sạch: bỏ đuôi .html khỏi URL
 RewriteCond %{THE_REQUEST} \s([^\s]+)\.html [NC]
 RewriteRule ^ %1 [R=301,L]
 
-# 3. Nội bộ rewrite URL không đuôi thành .html nếu tồn tại file .html tương ứng
+#########################
+# 5. Rewrite nội bộ nếu có file .html tương ứng
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# 4. Đặt index file mặc định
+#########################
+# 6. Trang mặc định
 DirectoryIndex index.html
+
+#########################
+# 7. Xóa cache hoàn toàn (HTML, CSS, JS, media)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js|png|jpg|jpeg|gif|svg|ico|webp|mp4|webm)$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </FilesMatch>
+</IfModule>
+
+#########################
+# 8. Bảo vệ file cấu hình
+<FilesMatch "(\.htaccess|\.env|\.git|\.DS_Store)">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+#########################
+# 9. Chống hiển thị thư mục nếu thiếu index.html
+Options -Indexes
+# =====================
+# 10. Tăng cường bảo mật với Header
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header always append X-Frame-Options SAMEORIGIN
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
