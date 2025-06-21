@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
       track.appendChild(clone);
     });
     let scrollAmount = 0;
-    const speed = 0.5; // tốc độ cuộn
+    const speed = 1; // tốc độ cuộn
     function autoScroll() {
       scrollAmount += speed;
       if (scrollAmount >= track.scrollWidth / 2) {
