@@ -64,23 +64,31 @@
     HEADER & NAVIGATION
   ========================= */
   header {
-    font-family: "Montserrat", sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 20px;
-    background: white;
-    border-bottom: 1px solid #eaeaea;
-    position: sticky;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: white;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 
-  .logo img {
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 18px; /* Khoảng cách nhỏ với phần bên cạnh */
+}
+
+.logo img {
   height: 75px;
   transition: height 0.3s ease;
+  display: block;
+  margin-right: 14px; /* Khoảng cách nhỏ với tiêu đề hoặc phần bên cạnh */
 }
   .navbar {
   position: relative;
@@ -181,6 +189,21 @@
    RESPONSIVE
 ========================= */
 
+/* Desktop nhỏ hơn 1200px */
+@media (max-width: 1200px) {
+  .logo img {
+    height: auto;
+    max-height: 65px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin-right: 12px;
+  }
+  .logo {
+    margin-right: 12px;
+  }
+}
+
 /* Desktop nhỏ hơn 900px */
 @media (max-width: 900px) {
   .logo img {
@@ -189,26 +212,30 @@
     width: auto;
     max-width: 100%;
     object-fit: contain;
+    margin-right: 10px;
   }
-
+  .logo {
+    margin-right: 10px;
+  }
   .nav-menu {
     gap: 16px;
     font-size: 16px;
   }
 }
 
-/* Tablet và mobile nhỏ hơn 768px */
-@media (max-width: 768px) {
+
+/* Tablet và mobile bằng 8px */
+@media (max-width: 800px) {
   header {
-    padding: 10px 10px;
+    padding: 10px 20px;
   }
 
   .nav-menu {
-    display: none;
+    display: none; /* Ẩn menu ngang trên tablet và mobile */
   }
 
   .mobile-nav-toggle {
-    display: block;
+    display: block; /* Hiện hamburger */
   }
 
   .logo img {
@@ -217,21 +244,29 @@
     width: auto;
     max-width: 100%;
     object-fit: contain;
+    margin-right: 8px;
+  }
+  .logo {
+    margin-right: 8px;
   }
 }
+
 
 /* Điện thoại nhỏ hơn 500px */
 @media (max-width: 500px) {
   .logo img {
     height: auto;
-    max-height: 40px;
+    max-height: 36px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
     transform: scale(0.9);
     transform-origin: top left;
+    margin-right: 6px;
   }
-
+  .logo {
+    margin-right: 6px;
+  }
   .d-done {
     display: none;
   }
@@ -1154,7 +1189,20 @@
     font-size: 14px;
     color: #555;
   }
-
+   /* Responsive: Tablet */
+@media (max-width: 1280px) {
+  .news-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+ /* Responsive: Tablet */
+@media (max-width: 1024px) {
+  .news-section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
   /* Mobile responsive tweaks */
   @media (max-width: 600px) {
     .news-item {
