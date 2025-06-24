@@ -1,10 +1,10 @@
-# 🌟 MSC Center – Web Frontend (msc_ver9)
+# 🌟 MSC Center – Web Frontend (Mekong_Center_Center_Website)
 ## 📋 Collaborators
 
 - 👨‍💻 [@StephenSouth13](https://github.com/StephenSouth13) – Author & Maintainer
 - 🤝 [@Superherocode](https://github.com/Superherocode) (Nguyễn Tuấn Dũng) – Contributor / Collaborator
 
-Trang tĩnh chính thức thể hiện thông tin dự án đào tạo của MSC Center – trung tâm Mentoring, Skills và Coaching đầu tiên tại Việt Nam. Hiện đang live tại: [https://stephensouth13.github.io/msc_ver9/](https://stephensouth13.github.io/Mekong_Center_Center_Website/)
+Trang tĩnh chính thức thể hiện thông tin dự án đào tạo của MSC Center – trung tâm Mentoring, Skills và Coaching đầu tiên tại Việt Nam. Hiện đang live tại: (https://stephensouth13.github.io/Mekong_Center_Center_Website/)]
 
 ## 🚀 Mục tiêu dự án
 - Giới thiệu về **MSC Center** – Viện kỹ năng mềm dành cho sinh viên và người đi làm tại TP.HCM :contentReference[oaicite:2]{index=2}.
@@ -13,9 +13,9 @@ Trang tĩnh chính thức thể hiện thông tin dự án đào tạo của MSC
 - Cung cấp thông tin liên hệ: địa chỉ, email, số điện thoại
 
 ## 🛠 Công nghệ & Thống kê ngôn ngữ
-- **HTML** – 74.4%
-- **CSS** – 22.0%
-- **JavaScript** – 3.6%
+- **HTML**
+- **CSS**
+- **JavaScript** 
 - Được phát triển dưới dạng trang **tĩnh**, deploy dễ dàng lên GitHub Pages bằng `gh-pages`.
 
 ## 📸 Demo giao diện
