@@ -70,3 +70,10 @@ Options -Indexes
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
 </IfModule>
+
+RewriteEngine On
+
+# Chuyển hướng từ URL cũ sang URL mới
+RewriteRule ^cv/pha/pha.html$ /mentor/phan-huynh-anh [L,R=301]
+RewriteRule ^cv/hcl/hcl.html$ /mentor/hoang-cuu-long [L,R=301]
+RewriteRule ^cv/ddm/ddm.html$ /mentor/doan-duc-minh [L,R=301]
