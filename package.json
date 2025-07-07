@@ -1,0 +1,13 @@
+{
+  "name": "msc-website",
+  "version": "1.0.0",
+  "description": "MSC - Trung tâm Mentoring kết hợp Coaching",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -c-1",
+    "start": "npx http-server . -p 3000 -c-1",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "author": "MSC Team",
+  "license": "ISC"
+}
