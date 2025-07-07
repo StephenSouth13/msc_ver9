@@ -4,8 +4,8 @@
   "description": "MSC - Trung tâm Mentoring kết hợp Coaching",
   "main": "index.html",
   "scripts": {
-    "dev": "python3 -m http.server 3000",
-    "start": "python3 -m http.server 3000",
+    "dev": "npx http-server . -p 3000 -c-1",
+    "start": "npx http-server . -p 3000 -c-1",
     "build": "echo 'Static site - no build needed'"
   },
   "author": "MSC Team",
