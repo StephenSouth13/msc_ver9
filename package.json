@@ -1,0 +1,13 @@
+{
+  "name": "msc-website",
+  "version": "1.0.0",
+  "description": "MSC - Trung tâm Mentoring kết hợp Coaching",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 3000",
+    "start": "python3 -m http.server 3000",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "author": "MSC Team",
+  "license": "ISC"
+}
